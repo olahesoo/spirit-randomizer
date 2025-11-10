@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Spirit Randomizer</title>
+    <script>
+      function random_child(node) {
+          n = Math.floor(Math.random() * node.childElementCount);
+          return node.children[n];
+      }
+      
+      function roll_spirit() {
+          const spirits = document.getElementById("spirits");
+          const rolls = document.getElementById("spirit-rolls");
+          const spirit = random_child(spirits);
+          if (spirit !== undefined) {
+              spirits.removeChild(spirit);
+              rolls.appendChild(spirit);
+          };
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Spirit Randomizer</h1>
+    <section>
+      <h2>Spirit rolls</h2>
+      <ul id="spirit-rolls">
+      </ul>
+      <button type="button" onclick="roll_spirit()">Roll spirit</button>
+    </section>
+    <section hidden>
+      <h2>Spirits</h2>
+      <ul id="spirits">
+        <li>A Spread of Rampant Green, Tangles aspect</li>
+        <li>A Spread of Rampant Green, Regrowth aspect</li>
+        <li>A Spread of Rampant Green, no aspect</li>
+        <li>Breath of Darkness Down Your Spine, no aspect</li>
+        <li>Bringer of Dreams and Nightmares, Enticing aspect</li>
+        <li>Bringer of Dreams and Nightmares, Violence aspect</li>
+        <li>Bringer of Dreams and Nightmares, no aspect</li>
+        <li>Dances Up Earthquakes, no aspect</li>
+        <li>Devouring Teeth Lurk Underfoot, no aspect</li>
+        <li>Downpour Drenches the World, no aspect</li>
+        <li>Ember-Eyed Behemoth, no aspect</li>
+        <li>Eyes Watch from the Trees, no aspect</li>
+        <li>Fathomless Mud of the Swamp, no aspect</li>
+        <li>Finder of Paths Unseen, no aspect</li>
+        <li>Fractured Days Split the Sky, no aspect</li>
+        <li>Grinning Trickster Stirs Up Trouble, no aspect</li>
+        <li>Heart of the Wildfire, Transforming aspect</li>
+        <li>Heart of the Wildfire, no aspect</li>
+        <li>Hearth-Vigil, no aspect</li>
+        <li>Keeper of the Forbidden Wilds, Spreading Hostility aspect</li>
+        <li>Keeper of the Forbidden Wilds, no aspect</li>
+        <li>Lightning's Swift Strike, Sparking aspect</li>
+        <li>Lightning's Swift Strike, Wind aspect</li>
+        <li>Lightning's Swift Strike, Pandemonium aspect</li>
+        <li>Lightning's Swift Strike, Immense aspect</li>
+        <li>Lightning's Swift Strike, no aspect</li>
+        <li>Lure of the Deep Wilderness, Lair aspect</li>
+        <li>Lure of the Deep Wilderness, no aspect</li>
+        <li>Many Minds Move as One, no aspect</li>
+        <li>Ocean's Hungry Grasp, Deeps aspect</li>
+        <li>Ocean's Hungry Grasp, no aspect</li>
+        <li>Relentless Gaze of the Sun, no aspect</li>
+        <li>Rising Heat of Stone and Sand, no aspect</li>
+        <li>River Surges in Sunlight, Haven aspect</li>
+        <li>River Surges in Sunlight, Travel aspect</li>
+        <li>River Surges in Sunlight, Sunshine aspect</li>
+        <li>River Surges in Sunlight, no aspect</li>
+        <li>Serpent Slumbering Beneath the Island, Locus aspect</li>
+        <li>Serpent Slumbering Beneath the Island, no aspect</li>
+        <li>Shadows Flicker Like Flame, Dark Fire aspect</li>
+        <li>Shadows Flicker Like Flame, Reach aspect</li>
+        <li>Shadows Flicker Like Flame, Madness aspect</li>
+        <li>Shadows Flicker Like Flame, Foreboding aspect</li>
+        <li>Shadows Flicker Like Flame, Amorphous aspect</li>
+        <li>Shadows Flicker Like Flame, no aspect</li>
+        <li>Sharp Fangs Behind the Leaves, Unconstrained aspect</li>
+        <li>Sharp Fangs Behind the Leaves, Encircle aspect</li>
+        <li>Sharp Fangs Behind the Leaves, no aspect</li>
+        <li>Shifting Memory of Ages, Intensify aspect</li>
+        <li>Shifting Memory of Ages, Mentor aspect</li>
+        <li>Shifting Memory of Ages, no aspect</li>
+        <li>Shroud of Silent Mist, Stranded aspect</li>
+        <li>Shroud of Silent Mist, no aspect</li>
+        <li>Starlight Seeks Its Form, no aspect</li>
+        <li>Stone's Unyielding Defiance, no aspect</li>
+        <li>Sun-Bright Whirlwind, no aspect</li>
+        <li>Thunderspeaker, Warrior aspect</li>
+        <li>Thunderspeaker, Tactician aspect</li>
+        <li>Thunderspeaker, no aspect</li>
+        <li>Towering Roots of the Jungle, no aspect</li>
+        <li>Vengeance as a Burning Plague, no aspect</li>
+        <li>Vital Strength of the Earth, Nourishing aspect</li>
+        <li>Vital Strength of the Earth, Resilience aspect</li>
+        <li>Vital Strength of the Earth, Might aspect</li>
+        <li>Vital Strength of the Earth, no aspect</li>
+        <li>Volcano Looming High, no aspect</li>
+        <li>Wandering Voice Keens Delirium, no aspect</li>
+        <li>Wounded Waters Bleeding, no aspect</li>
+      </ul>
+    </section>
+  </body>
+</html>
